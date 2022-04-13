@@ -9,7 +9,7 @@ Et si on en profitait pour mettre MongoDB à l'épreuve ?
 **Prérequis** : avoir une version récente (v4) de Mongo installée (pour vérifier, `mongod --version`) et l'utilitaire `tar` (pour vérifier, `tar --version`) mais normalement, il l'est par défaut sur le Téléporteur.
 
 - Extraire le fichier de données de l'archive fournie : `tar zxvf ./data.tar.gz`
-- Lancer notre server MongoDB : `sudo service mongod start`
+- Lancer notre server MongoDB : `sudo service mongodb start`
 - Importer le fichier de données dans une base MongoDB : `mongoimport --collection=rides --db=oparc --jsonArray --type=json data.json`
 
 Si la base de données n'existe pas, il la crée. Pareil pour la collection. Non, on n'a pas défini de schéma (on ne parle pas des `schema` de Postgres mais plus généralement d'un quelconque _schéma de données_). Non, MongoDB n'en a pas besoin, cette notion n'existe pas pour lui.
